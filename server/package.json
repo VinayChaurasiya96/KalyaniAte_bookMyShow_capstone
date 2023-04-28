@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "test": "mocha '__tests__/*.test.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
     "run": "node ./index.js",
-    "start": "nodemon ./index.js"
+    "start": "node ./index.js"
   },
   "author": "",
   "license": "ISC",

@@ -24,23 +24,24 @@ const BookMovie = () => {
   const [isSlot, setIsSlot] = useState();
   const [isSeat, setIsSeat] = useState();
   const [bookMovieStatus, setBookMovieStatus] = useState();
-  const [getlastMovieStatus, setGetlastMovieStatus] = useState();
+  const [isPending, setIsPending] = useState(true);
 
   // fetching last booking details
   const fetchLastBooking = () => {
     // initially get last movie status will be pending
-    setGetlastMovieStatus("pending");
+
     fetch(`${process.env.API_URI}/api/booking`)
       .then((res) => res.json())
       .then((json) => {
         setLastBooking(json);
 
         // status will be fullfilled after getting successfull response
-        setGetlastMovieStatus("fullfilled");
+
+        setIsPending(false);
       })
       .catch((error) => {
         //if any error will accours then error toast will be displaying
-        setGetlastMovieStatus("error");
+
         toast.error("something went wrong");
 
         console.log(error);
@@ -100,7 +101,17 @@ const BookMovie = () => {
       .then((json) => {
         // it will display a success toast after getting successfull response
 
-        toast.success(json.message);
+        toast.success("Booking Successfull", {
+          style: {
+            border: "1px solid #713200",
+            padding: "16px",
+            color: "#713200",
+          },
+          iconTheme: {
+            primary: "#713200",
+            secondary: "#FFFAEE",
+          },
+        });
         setBookMovieStatus("fullfilled");
         resetForm();
 
@@ -199,11 +210,11 @@ const BookMovie = () => {
 
           {/* last booking section */}
           <div className="right">
-            {/* {status == "pending" && <p>Pending</p>} */}
-            <LastBooking
-              getlastMovieStatus={getlastMovieStatus}
-              lastBooking={lastBooking}
-            />
+            {isPending ? (
+              <p>Pending</p>
+            ) : (
+              <LastBooking isPending={isPending} lastBooking={lastBooking} />
+            )}
           </div>
         </div>
       </div>

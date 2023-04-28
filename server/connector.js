@@ -1,14 +1,14 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
-const {bookMovieSchema} = require("./models/bookMovieSchema");
+const mongodb = require("mongodb");
 
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = process.env.MONGODB_URL;
 
-// Establishing connection with MongoDB database
+let mongoose = require("mongoose");
+const {bookMovieSchema} = require("./schema");
+
 mongoose
   .connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => {
-    console.log("connection established with mongodb server online ");
+    console.log("connection established with mongodb server online");
   })
   .catch((err) => {
     console.log("error while connection", err);
