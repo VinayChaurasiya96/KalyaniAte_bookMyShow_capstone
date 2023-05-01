@@ -3,7 +3,7 @@ import React, {useEffect} from "react";
 const LastBooking = ({lastBooking}) => {
   return (
     <div className="last-order">
-      <h3>Last booking details:</h3>
+      <h3 className="Bookdetails">Last booking details:</h3>
       {lastBooking.message ? (
         <div>No Previous Bookings Found</div>
       ) : (

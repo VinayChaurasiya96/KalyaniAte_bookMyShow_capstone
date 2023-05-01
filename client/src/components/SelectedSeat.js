@@ -19,7 +19,7 @@ const SelectedSeat = ({
 
   return (
     <div className="seat-row">
-      <h3>Select the seats</h3>
+      <h3 className="Slots">Select the seats</h3>
       {seats.map((seat, i) => (
         <div
           key={i}

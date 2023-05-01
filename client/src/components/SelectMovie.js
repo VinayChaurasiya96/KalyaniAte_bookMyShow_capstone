@@ -16,7 +16,7 @@ const SelectMovie = ({
 
   return (
     <div className="movie-row">
-      <h3>Select A Movie</h3>
+      <h3 className="Slots">Select A Movie</h3>
       {movies.map((movie, i) => (
         <div
           key={i}
