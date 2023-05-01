@@ -1,6 +1,6 @@
-# `Book My Show`
+**Book My Show**
 
-This is a backend capstone project assignment from Almabetter, it is a ticket booking app which helps in booking tickets, this app lets us book movie tickets, and display the booked ticket details like seat, slot, number of tickets and movie name. All api's are working properly with proper error logging, The user interface of this app is completely responsive.
+This is a backend capstone project Almabetter, it is use for a Movie ticket booking app. this app helps of the book that show, To use this app, first you have to click on select movie, after that you have to click on select a time slot, and finally you have to click on select a seat,and click on book now button, after that your tickets will be booked. All api's are working properly with proper error logging, This project is fully responsive.
 
 ## `UI`
 

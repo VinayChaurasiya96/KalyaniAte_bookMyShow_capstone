@@ -11,7 +11,7 @@ const SelectSlot = ({slots, selectedSlot, setSelectedSlot}) => {
 
   return (
     <div className="slot-row">
-      <h3>Select a Time Slot</h3>
+      <h3 className="Slots">Select a Time Slot</h3>
       {slots.map((slot, i) => (
         <div
           key={i}
