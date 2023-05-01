@@ -6,10 +6,10 @@ import toast, {Toaster} from "react-hot-toast";
 
 // my imports
 import {movies, slots, seats} from "../utils/movieData/BookMovieData";
-import LastBooking from "../components/lastBooking";
-import SelectMovie from "../components/SelectMovie";
-import SelectSlot from "../components/SelectSlot";
-import SelectedSeat from "../components/SelectedSeat";
+import LastBooking from "../components/PreBooking";
+import SelectMovie from "../components/Movie";
+import SelectSlot from "../components/Slot";
+import SelectedSeat from "../components/Seat";
 
 const BookMovie = () => {
   const [lastBooking, setLastBooking] = useState({});
@@ -211,7 +211,7 @@ const BookMovie = () => {
           {/* last booking section */}
           <div className="right">
             {isPending ? (
-              <p>Pending</p>
+              <p>Loading</p>
             ) : (
               <LastBooking isPending={isPending} lastBooking={lastBooking} />
             )}

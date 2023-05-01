@@ -37,7 +37,7 @@ appRouter.route("/booking").get(async (req, res) => {
     if (lastbooking) {
       res.send(lastbooking);
     } else {
-      res.send({message: "no previous bookings "});
+      res.send({message: "no previous bookings found "});
     }
   } catch (err) {
     res.send(err.message);

@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import InputField from "./Input";
+import InputField from "./AllInput";
 
 // this component rendering selected seat section
 const SelectedSeat = ({

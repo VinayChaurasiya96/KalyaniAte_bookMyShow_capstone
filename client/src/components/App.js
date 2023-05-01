@@ -1,7 +1,7 @@
 import React from "react";
+import BookMovie from "../Container/Bookings";
 import "../styles/App.css";
 import "../styles/bootstrap.min.css";
-import BookMovie from "../pages/bookMovie";
 const App = () => {
   return (
     <>
